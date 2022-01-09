@@ -1,0 +1,713 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.header{
+  max-width: 100%;
+  height: 100vh;
+  background: url("../img/background(1).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+
+nav{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 55%;
+  align-items: center;
+}
+
+.item-link{
+  text-transform: uppercase;
+  color: #565260;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.item{
+  position: relative;
+  cursor: pointerddddddddddddddddddd;
+}
+
+.item::after{
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #565260;
+  transition: width 600ms;
+}
+
+.item:hover::after{
+  width: 100%;
+}
+
+.item-link svg{
+  margin-top: 20px;
+}
+.knp_pod_menu{
+  display: none;
+}
+
+.about{
+  font-family: 'Lato', sans-serif;
+  background-color: #F7F7F7;
+}
+
+.container_about{
+  max-width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+
+}
+
+.item_about{
+  flex-basis: 80%;
+}
+
+.image_about{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title_about{
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #353738;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 30px;
+}
+
+.text_about{
+  font-family: 'Lato', Regular;
+  font-size: 18px;
+  color: #B2B4B5;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+.work{
+  font-family: 'Lato', sans-serif;
+}
+
+.one_line_work{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  min-height: 600px;
+}
+
+.one_line_item{
+  flex-basis: 60%;
+
+}
+
+.one_line_item img{
+  width: 100%;
+  height: 100%;
+}
+
+.two_line_item{
+  display: flex;
+  flex-basis: 40%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.image_two_item{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title_two_item{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+.text_two_item{
+  text-align: center;
+  padding: 0px 14%;
+  color: #B2B4B5;
+  line-height: 20px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.background_botoom_one{
+  max-width: 100%;
+  height: 260px;
+  margin-top: 150px;
+
+}
+
+.background_botoom_one img{
+  width: 100%;
+  height: 100%;
+}
+
+.two_line_work{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    min-height: 600px;
+}
+
+.one_item{
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+.two_item{
+  flex-basis: 60%;
+}
+
+.failed{
+  flex-basis: 60%;
+}
+
+.two_item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.three_line_work{
+  display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+min-height: 600px;
+}
+
+.three_line_image_one img{
+  width: 100%;
+  height: 100%;
+}
+
+.pr_two img{
+  width: 100%;
+  height: 100%;
+}
+
+.item_one{
+  flex-basis: 33.333%;
+}
+
+#item_one{
+  flex-basis: 44.333%;
+}
+
+.item_one img{
+  width: 100%;
+  height: 100%;
+}
+
+.item_two{
+  flex-basis: 33.333%;
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.item_three{
+  flex-basis: 33.333%;
+}
+
+.item_three img{
+  width: 100%;
+  height: 100%;
+}
+
+.slider{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+
+}
+
+.container_slider{
+  flex-basis: 60%;
+  margin-top: 100px;
+}
+
+.slider_image{
+  text-align: center;
+
+}
+
+.title_slider{
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Lato",sans-serif;
+  color: #353738;
+  font-size: 18px;
+}
+
+.title_slider span{
+  color: #848789;
+}
+
+.text_slider{
+  font-family: "Lato",sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+  color: #848789;
+}
+
+.products{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.one{
+  flex-basis: 33.333%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.one_line_image{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+
+.one_line_image img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.two_line_image img{
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.two{
+  flex-basis: 33.333%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.pr_one{
+  flex-basis: 50%;
+}
+
+.pr_one img{
+  width: 100%;
+  height: 100%;
+}
+
+.three{
+  flex-basis: 33.333%;
+}
+
+.three_line_image_two{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.pr_two{
+  flex-basis: 50%;
+}
+
+.container_knp_shop{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  background-color: #282F35;
+}
+
+.knp_shop{
+  text-transform: uppercase;
+  color:#F1F1F2 ;
+  font-size: 14px;
+  padding: 1% 4%;
+  border: 2px solid #94979A;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  font-family: "Lato",sans-serif;
+  font-weight: bold;
+  transition: background-color 600ms;
+}
+
+.knp_shop:hover{
+  background-color: #68AA91;
+}
+
+.container_email{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  background-color: #64C29E;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-family: "Lato",sans-serif;
+  font-weight: 300;
+  flex-basis: 20%;
+}
+
+  .email{
+    margin-top: 100px;
+    margin-bottom: 110px;
+    flex-basis: 60%;
+  }
+
+.icons_email{
+  text-align: center;
+
+}
+
+.title_email{
+  font-family: "Lato",sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  color:#848789;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.form_email{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: 40px;
+}
+
+.form_email input[type="text"]{
+  padding: 0px 20px 0px 20px;
+  font-size: 20px;
+  margin-right: 20px;
+  font-family: "Lato",sans-serif;
+  font-style: italic;
+  flex-basis: 80%;
+}
+
+.footer{
+  background-color: #F7F7F7;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.one_footer{
+  text-align: left;
+}
+
+.text{
+  font-family:  "Lato",sans-serif;
+  color: #939698;
+  font-size: 24px;
+}
+
+.title_footer{
+  font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.container_footer{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 80%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.services{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .item_services:last-child{
+  margin-right: 0px;
+}
+
+.item_services{
+  margin-right: 10px;
+}
+
+.logo{
+  font-family: "Lato",sans-serif;
+  font-style: italic;
+  color: #939698;
+  font-size: 20px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo svg{
+    position: relative;
+    top: 16px;
+    left: 3px;
+}
+
+.adapt{
+  flex-basis: 50%;
+}
+
+.adapt img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:1000px) {
+
+    .container_footer{
+      flex-direction: column;
+    }
+
+    .title_footer{
+      text-align: center;
+    }
+
+    .text{
+      margin-top: 20px;
+    }
+
+
+    .addres_footer{
+      text-align: center;
+    }
+
+    .email_footer{
+      text-align: center;
+    }
+
+    .services{
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+
+  .logo{
+    display: none;
+  }
+
+  .form_email input[type="text"]{
+    padding: 20px 20px 20px 20px;
+    margin-right: 0px;
+  }
+
+    button{
+      margin-top: 10px;
+    }
+
+  .form_email{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navigation{
+    flex-basis: 100%;
+    min-height: 500px;
+    flex-direction: column;
+    background-color: #323232;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 600ms,opacity 400ms;
+  }
+
+  .active_navigation{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .item-link{
+    color: white;
+  }
+
+  .knp_pod_menu{
+    width: 70px;
+
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .knp_pod_menu span{
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: white;
+    display: block;
+    margin-bottom: 20%;
+  }
+
+  .knp_pod_menu span:last-child{
+
+    margin-bottom: 0%;
+  }
+
+  .one_line_work{
+    flex-direction: column;
+  }
+
+  .two_line_work{
+    flex-direction: column;
+  }
+
+  .three_line_work{
+    flex-direction: column;
+  }
+
+  .three_line_image_one img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .background_botoom_one{
+    height: 213px;
+  }
+
+  .knp_shop{
+    padding: 3% 4%;
+  }
+}
+
+@media (max-width:700px) {
+  .products{
+    flex-direction: column;
+  }
+  .adapt{
+    flex-basis: 50%;
+  }
+
+  .pr_two img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media (max-width:600px) {
+  .one_line_work{
+    flex-direction: column;
+  }
+}

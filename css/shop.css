@@ -1,0 +1,48 @@
+.one{
+  position: relative;
+  overflow: hidden;
+}
+
+.two{
+  position: relative;
+  overflow: hidden;
+}
+
+.three{
+  position: relative;
+  overflow: hidden;
+}
+
+.box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(89, 165, 140, 0.7) ;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: transform 600ms;
+}
+
+.box_active{
+  transform: translateX(0%);
+}
+
+.image_box{
+  text-align: center;
+}
+
+.tb{
+  color: white;
+  font-size: 24px;
+  font-family: "Lato",sans-serif;
+  text-transform: uppercase;
+}
